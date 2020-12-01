@@ -54,8 +54,9 @@ export function App() {
 
     setUserId(userId);
 
-    // run the debounced task.
-    debounceTask(userId);
+    // run the debounced task, instead of running the task upon every input change.
+    // debounceTask(userId);
+    run(fetchUser(userid));
   };
 
   return (
