@@ -152,7 +152,9 @@ A unit test for this scenario must:
 
 *   Assert that the list of _rendered todos_ has the same length as the _mock todos_.
 
-*   Assert that the text of each rendered todo matches the title of each mock todo.
+*   _(Optional)_ 
+
+    Assert that the text of each rendered todo matches the title of each mock todo.
 
     > Tip 1: Each rendered todo in the list returned by `screen.findAllByRole` has a `textContext` property.
 
@@ -165,13 +167,20 @@ A unit test for this scenario must:
 ### Testing an async update
 Deleting a todo should send a DELETE request to the backend and then, upon a successful response, update the component state. 
 
-Rewrite the `deleteTodo` callback in the App component to first make a DELETE request before updating the state. The axios call looks as follows:
+Rewrite the `deleteTodo` callback in the App component to first make a DELETE request before updating the state: 
 
 ```javascript
-await axios({
-  url: `http://jsonplaceholder.typicode.com/todos/${todoId}`,
-  method: 'DELETE'
-});
+const deleteTodo = useCallback(async (todoId) => {
+  await axios({
+    url: `http://jsonplaceholder.typicode.com/todos/${todoId}`,
+    method: 'DELETE'
+  });
+  
+  dispatch({
+    type: 'DELETE_TODO',
+    todoId,
+  });
+}, []);
 ```
 
 A unit test for this scenario must:
