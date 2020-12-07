@@ -20,7 +20,7 @@ After having identified the code that has an adverse effect on rendering (throug
 
     Run the React Profiler and mark a todo as completed; compare the rendering time using `useMemoMode` with using `useMode`.
 
-3.  The previous improvement helped somewhat but the problem remains when the list of todos _do_ change.
+3.  The previous improvement helped somewhat but the problem remains when the list of todos _does_ change.
 
     The better solution is to put the entire computation _outside the render_, with `useEffect`.
 
