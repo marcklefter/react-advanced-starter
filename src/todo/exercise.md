@@ -38,7 +38,7 @@ After having identified the code that has an adverse effect on rendering (throug
         ```
         and access inside the `useEffect` via `ref.current`.
 
-        Change the hook in the App component from `useMode` to `useMemoMode`.
+        Change the hook in the App component from `useMemoMode` to `useAsyncMode`.
 
         Run the React Profiler and perform several todo operations; compare the rendering time (and the general application responsiveness) using `useAsyncMode` with the previous hooks.
 
