@@ -15,7 +15,7 @@ One way to solve this is to split the overall state into two separate contexts, 
 In `App2`, implement this solution by having an `AuthContext` (and `AuthProvider`) as well as a `ThemeContext` (and `ThemeProvider`). Verify in the console.
 
 ## Part 2 - Wrapper component.
-Sometimes splitting a context isn't always feasible (especially if there are state interdependencies), so another solution is to main a single (or a few) contexts with application state and _intercept_ possible rerenders by _wrapping_ affected components.
+Sometimes splitting a context isn't always feasible (especially if there are state interdependencies), so another solution is to have a single (or a few) contexts with application state and _intercept_ possible rerenders by _wrapping_ affected components.
 
 In this example, to avoid rerendering the ThemeSelector component, wrap it a separate component called `ThemeSelectorWrapper`; let this wrapper component consume the AppContext to get the theme state. Then _forward the theme state as props_ to ThemeSelector and ensure that it only rerenders _if the props have changed_.
 
