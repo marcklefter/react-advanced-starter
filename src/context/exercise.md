@@ -10,7 +10,7 @@ In the `context` example, the first version - `App1` - demonstrates this:
 *   However, when the user logs in / out, only the Login component should be affected; currently however, _both_ Login and ThemeSelector rerender (as displayed in the console).
 
 ## Part 1 - Split contexts.
-One way to solve this is to split the overall state into two separate contexts, one for login and one for theme, and have the Login and Theme consume each context accordingly.
+One way to solve this is to split the overall state into two separate contexts, one for login and one for theme, and have the Login and ThemeSelector components consume each context accordingly.
 
 In `App2`, implement this solution by having an `AuthContext` (and `AuthProvider`) as well as a `ThemeContext` (and `ThemeProvider`). Verify in the console.
 
