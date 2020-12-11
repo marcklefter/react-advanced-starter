@@ -18,37 +18,18 @@ const AppContext = React.createContext();
 // ...
 
 function AppProvider({ children }) {
-  const [appState, setAppState] = useState({
-    login: false,
-    theme: theme1
-  });
-
-  const setState = useCallback(partialState => {
-    setAppState(prevState => ({
-      ...prevState,
-
-      ...partialState
-    }));
-  }, []);
-
-  const {
-    login, 
-    theme
-  } = appState;
+  const [login, setLogin] = useState(false);
+  const [theme, setTheme] = useState(theme1);
 
   const value = {
     login,
-    theme,
+    setLogin,
 
-    setLogin(login) {
-      setState({ login })
-    },
-    setTheme(theme) {
-      setState({ theme })
-    }
+    theme,
+    setTheme
   };
 
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>  
 }
 
 // ...
