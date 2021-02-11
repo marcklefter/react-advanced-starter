@@ -26,7 +26,7 @@ Implement the `authReducer` by handling the following action types:
 Think about what action payload may (or may not) be needed when handling these action types.
 
 ### Actions
-Add action creators in `actions.js` for each of the aforementioned action types. Add any action payloads that may be needed by your implementation of `authReducer`.
+Add action creators in a file `actions.js` for each of the aforementioned action types. Add any action payloads that may be needed by your implementation of `authReducer`.
 
 ### Store
 In `App.jsx`: 
