@@ -12,12 +12,6 @@ function counterReducer(state = null, action) {
         value: state.value + state.incBy
       };
 
-    case 'counter/setIncBy':
-      return {
-        ...state,
-        incBy: action.payload
-    };
-
     default:
       return state;
   }

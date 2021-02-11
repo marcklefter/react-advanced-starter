@@ -9,9 +9,9 @@ import {
 
 // ...
 
-function Counter({ value, incBy, update, setIncBy }) {
+function Counter({ value, incBy, update }) {
   const handleChange = e => {
-    setIncBy(+e.target.value);
+    // TODO: Dispatch action to set incBy state.
   };
 
   return (
@@ -36,8 +36,7 @@ export default connect(
   }),
   // mapDispatchToProps
   {
-    update,
-    setIncBy
+    update
   }
 )(Counter);
 
