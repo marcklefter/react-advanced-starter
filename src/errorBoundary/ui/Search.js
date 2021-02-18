@@ -11,8 +11,8 @@ import {
 } from '../AppError';
 
 import {
-  ErrorHandler 
-} from '../ErrorHandler';
+  ErrorBoundary 
+} from '../ErrorBoundary';
 
 // ...
 
@@ -28,7 +28,7 @@ function SearchEngine({ query }) {
   }
 
   if (query.toLowerCase() === QueryFail) {
-    // TODO: Pass a boundaryId to AppError to have it propagate to the application top-level error boundary.
+    // TODO 2: Pass a boundaryId to AppError to have it propagate to the application top-level error boundary.
     throw new AppError('Search failed for query "' + query + '"', '');
   }
 
@@ -59,7 +59,7 @@ export function Search() {
       <div style={{
         marginTop: 50
       }}>
-        {/* TODO: Add an error boundary with a SearchFallback */}
+        {/* TODO 1: Add an error boundary with a SearchFallback */}
         <SearchEngine query={query} />
       </div>
     </div>

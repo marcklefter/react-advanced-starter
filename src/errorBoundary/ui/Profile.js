@@ -10,7 +10,7 @@ import {
 } from '../AppError';
 
 import {
-  useErrorHandler
+  useError
 } from '../errorContext';
 
 export function Profile() {

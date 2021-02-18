@@ -3,11 +3,11 @@ import {
 } from '../AppError';
 
 import {
-  ErrorHandler
-} from '../ErrorHandler';
+  ErrorBoundary
+} from '../ErrorBoundary';
 
 import {
-  useErrorHandler
+  useError
 } from '../errorContext';
 
 import {

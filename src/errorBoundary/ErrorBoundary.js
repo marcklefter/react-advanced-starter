@@ -6,7 +6,7 @@ import {
 
 // ...
 
-export class ErrorHandler extends React.Component {
+export class ErrorBoundary extends React.Component {
   state = {
     error: null
   };
