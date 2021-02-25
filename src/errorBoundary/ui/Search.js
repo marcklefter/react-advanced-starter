@@ -28,14 +28,13 @@ function SearchEngine({ query }) {
   }
 
   if (query.toLowerCase() === QueryFail) {
-    // TODO 2: Pass a boundaryId to AppError to have it propagate to the application top-level error boundary.
-    throw new AppError('Search failed for query "' + query + '"', '');
+    throw new AppError('Search failed for query "' + query + '"');
   }
 
   return `Search: ${query}`;
 }
 
-export function Search() {
+export default function Search() {
   const [query, setQuery] = useState('');
 
   const debouncedSetQuery = useMemo(
@@ -59,7 +58,7 @@ export function Search() {
       <div style={{
         marginTop: 50
       }}>
-        {/* TODO 1: Add an error boundary with a SearchFallback */}
+        {/* TODO: Add an error boundary with a SearchFallback */}
         <SearchEngine query={query} />
       </div>
     </div>

@@ -2,13 +2,8 @@ import React, {
   useState
 } from 'react';
 
-import {
-  Feed
-} from './Feed';
-
-import {
-  Search
-} from './Search';
+import Feed from './Feed';
+import Search from './Search';
 
 // ...
 

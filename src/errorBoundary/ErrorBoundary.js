@@ -14,9 +14,7 @@ export class ErrorBoundary extends React.Component {
   // ...
 
   retry = () => {
-    this.setState({
-      error: null
-    });
+    // TODO: Reset the error state in order to retry rendering the child component tree.
   }
 
   capture = error => {
@@ -54,14 +52,9 @@ export class ErrorBoundary extends React.Component {
 
     if (error) {
       const {
-        id,
         Fallback
       } = this.props;
       
-      if (error.boundaryId && error.boundaryId !== id) {
-        throw error;
-      }
-
       return <Fallback error={error} retry={this.retry} />
     }
 

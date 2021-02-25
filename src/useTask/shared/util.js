@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // ...
 
-export function fetchUser(id, delayMs = 5000) {
+export function fetchUser(id, delayMs = 1000) {
   return new Promise((resolve, reject) => {
     setTimeout(
       async () => {

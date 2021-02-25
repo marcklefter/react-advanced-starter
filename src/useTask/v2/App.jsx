@@ -47,7 +47,10 @@ export function App() {
   //
   // Use of useMemo hook:
   // 
-  //  const debounceTask = useMemo(() => /* return debounced function to run the task fetchUser */, [deps]).
+  //  const debounceTask = useMemo(
+  //   () => /* return debounced function to run the task fetchUser */, 
+  //   [any dependencies]
+  //  ).
 
   const handleChange = e => {
     const userId = +e.target.value;

@@ -7,12 +7,12 @@ import {
 
 // TODO:
 //
-// Implement useState using useReducer (hint: Not a lot of code required!).
+// Implement the useState hook using useReducer (hint: Not a lot of code required!).
 //
 // Should support both setCount variants.
 //  
 // function useState(initialValue) {
-//  // use useReducer...  
+//  // implement the hook with useReducer...  
 // }
 
 export function App() {

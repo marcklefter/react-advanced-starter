@@ -20,7 +20,7 @@ export function Profile() {
     async function fetchProfile() {
       // TODO:
       //
-      // capture() error that may occur during profile fetching (e.g. try a faulty URL).
+      // capture() error that may occur during profile fetching; simulate this by testing with a faulty URL.
       const result = await axios('https://randomuser.me/api/');
 
       setProfile(result.data.results[0]);

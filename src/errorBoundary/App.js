@@ -11,13 +11,14 @@ import styles from './App.module.css';
 
 // ...
 
-// fallback component (required) for the top-level error boundary.
+// fallback component for the top-level error boundary.
 function AppFallback({ error, retry }) {
   return (
     <div>
       <p>A critical application error occurred: {error.message}</p>
       <button onClick={() => console.log(error)}>Report Feedback</button>
-      <button onClick={retry}>Retry</button>
+
+      {/* TODO: Add a button to retry rendering  */}
     </div>
   )
 }
@@ -26,7 +27,7 @@ export function App() {
   return (
     <div className={styles.app}>
       {/* Top-level error boundary. */}
-      <ErrorBoundary id="root" Fallback={AppFallback}>
+      <ErrorBoundary Fallback={AppFallback}>
         <div className={styles.section}>
           <Profile />
         </div>

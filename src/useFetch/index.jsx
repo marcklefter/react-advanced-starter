@@ -51,7 +51,7 @@ function useFetch(fetcher, options) {
     }));
   };
 
-  // TODO:
+  // TODO 2:
   // 
   // Uncomment the code below when you're ready to test your passed in fetcher and options parameters.
   // 
@@ -110,7 +110,7 @@ export function App() {
     data,
     error
   } = useFetch(
-    // TODO:
+    // TODO 1:
     //
     // Pass a fetcher function that is bound to the user.
     // Pass an options object.

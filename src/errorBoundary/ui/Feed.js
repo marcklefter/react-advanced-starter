@@ -11,8 +11,8 @@ import {
 } from '../errorContext';
 
 import {
-  FeedItem 
-} from './FeedItem';
+  FeedItem
+} from './FeedItem';
 
 // ...
 
@@ -43,19 +43,9 @@ function FeedItemFallback() {
   )
 }
 
-export function Feed() {
-  const onRefresh = () => {
-    // TODO: trace() this (simulated) error.
-    throw new AppError('Could not refresh feed');
-  }
-
-  return (
-    <>
-      <button onClick={onRefresh}>Refresh</button>
-      {/* TODO: Ensure that if a specific feed item fails, the others will still be shown. Use the FeedItemFallback above. */}
-      {items.map((item, i) => (
-        <FeedItem key={i} {...item} />
-      ))}
-    </>
-  )
+export default function Feed() {
+  // TODO: Ensure that if a specific feed item fails, the others will still be shown. Use the FeedItemFallback above.
+  return items.map((item, i) => (
+    <FeedItem key={i} {...item} />
+  ))
 }
