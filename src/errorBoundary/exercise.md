@@ -41,11 +41,11 @@ Implement the sections marked with _TODO_ in the following files:
 
 * `Feed.js`
 
+* Complete the _TODO_ sections in `App.js` and `ErrorBoundary.js` to allow the user to retry rendering the component tree (such as when profile data cannot be fetched).
+
 * `Search.js`
 
   (searching with the phrase "fail" results in an error; the error boundary resets itself immediately when entering new text)
-
-Next, complete the _TODO_ sections in `App.js` and `ErrorBoundary.js` to allow the user to retry rendering the component tree (such as when profile data cannot be fetched).
 
 ## Part 2: Code splitting (optional)
 
