@@ -12,7 +12,7 @@ Implement the section(s) marked with _TODO_ in `example_1.jsx`.
 
 ### Optional
 
-Add an _input_ element to change _by how much_ the counter should be updated.
+Add an _input_ element (in the Counter component) to change _by how much_ the counter should be updated.
 
 ## Example 2
 
